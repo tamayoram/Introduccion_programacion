@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica de formularios con el html</title>
+	<meta charset="utf-8">
+	<meta name="author" content="tamayoram">
+	<meta name="description" content="Se utiliza para practicar los temas correspondientes a programación HTML">
+	<meta name="keyword" content="HTML javascript programación">
+	<meta name="viewport" content="initial-scale=1">
+</head>
+
+<body>
+
+<form name="camiloform" id="camiloform" action="ejemplo3.html" method="post">
+
+	<div align="center"><h2>Ejemplo de formulario</h2></div>
+
+	<p>
+		<label for="nom"><font face="verdana">Nombre</font></label>&nbsp;<input name="nom" id="nom" type="text" size="30" maxlength="50" placeholder="Escribe tu nombre" required>
+	</p>
+
+	<p>
+		<label for="email">Correo electrónico</label>&nbsp;<input name="email" id="email" type="email" size="30" maxlength="50" placeholder="@" required>
+	</p>
+
+<p>
+		<label for="Pop">Población</label>&nbsp;&nbsp;<input name="Pop" id="Pop" type="number" size="50" maxlength="100" placeholder="Ingresa el total de la población">
+	</p>
+
+	<p>
+	<label>Genero:</label><br>
+	<input name="Fem" id="Fem" type="radio" value="0">Mujer
+	<br>
+	<input name="man" id="man" type="radio" value="1">Hombre
+	</p>
+
+	<p>
+		<label>Frecuencia de lectura:</label><br>
+		<select name="lectura" id="lectura">
+			<option value="0">Nunca</option>
+			<option value="1" selected>Algunas veces</option>
+			<option value="2">Siempre</option>
+
+		</select>
+
+<p>
+	<label>Comentarios:</label><br>
+	<textarea name="coment" id="coment" cols="80" rows="5" placeholder="Ingrese sus observaciones"></textarea>
+</p>
+
+<p>
+	<input type="checkbox" name="novedades" id="novedades" checked>Deseo obtener novedades
+</p>
+
+<fieldset>
+	<legend>Aclaración de la etiqueta</legend>
+
+<br>
+	<button name="boton" id="boton" value="2">Enviar información</button>
+
+<br>
+
+<p>
+	<button type="reset" name="borrar" id="borrar"> Borrar la información</button>
+</p>
+
+</fieldset>
+
+
+</body>
+</html>

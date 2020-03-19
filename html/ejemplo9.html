@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 9</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="html,css,javascript,servidores,hosting,cloud computing">
+	<meta name="description" content="Pagina que contiene principios de programacion orientada a internet basada en html,estilos y codigo javascript">
+	<meta name="viewport" content="initial-scale=1">
+
+</head>
+
+<body background="" bgcolor="">
+
+<div align="center"> 	<h1> Formulario de registro </h1> </div>
+
+<!-- los controles tipo input pueden tener name, id, value, type (text, number, email, date, password), size, maxlength, placeholder (texto indicativo dentro de la casilla) -->
+
+<form name="frm" id="frm" action="gracias.html" method="post">
+
+	<p>
+		<label for="nombrecompleto">Nombre completo:</label> <!-- label es para focalizar siempre el puntero al input-->
+		<br>
+		<input type="text" name="nombrecompleto" id="nombrecompleto" size="30" maxlength="50" placeholder="Digita tu nombre" required>
+
+	</p>	
+
+	<p>
+		<label for="telefono">Telefono:</label> 
+		<br>
+		<input type="number" name="telefono" id="telefono" size="30" maxlength="10" placeholder="Digita el telefono">
+
+	</p>	
+
+	<p>
+		<label for="email">Email:</label> 
+		<br>
+		<input type="email" name="email" id="email" size="30" maxlength="50" placeholder="Digita tu correo electronico" required>
+
+	</p>	
+
+	<p>
+		<label for="fecharegistro">Fecha de registro:</label> 
+		<br>
+		<input type="date" name="fecharegistro" id="fecharegistro" size="10" maxlength="50" placeholder="Fecha de registro">
+
+	</p>	
+
+
+	<p>
+		<label for="clave">Clave de acceso:</label> 
+		<br>
+		<input type="password" name="clave" id="clave" size="30" maxlength="20" placeholder="Ingresa la clave">
+
+	</p>
+
+	<p>
+		<input type="checkbox" name="acepto" id="acepto" size="30" value="1" required> Acepto terminos y condiciones
+
+	</p>
+
+	<p>
+		<label for="Genero">Genero:</label> 
+		<br>
+		<input type="radio" name="Genero" id="Genero" value="F">Femenino<br>
+		<input type="radio" name="Genero" id="Genero" value="M">Masculino<br>
+
+	</p>
+
+	<p>
+		<label for="tiporegistro">Tipo de registro:</label> 
+		<br>
+		<select name="tiporegistro" id="tiporegistro">
+			<option value=" "> Seleccione...</option>
+			<option value="1"> Registro como cliente</option>
+			<option value="2"> Registro como vendedor</option>
+			<option value="3"> Registro como proveedor</option>	
+		</select>
+
+	</p>
+
+
+
+	<p>
+		<label for="observaciones">Ingrese sus observaciones:</label> 
+		<br>
+		<textarea name="observaciones" id="observaciones" cols="50" rows="4" placeholder="Digite sus observaciones"></textarea>
+
+	</p>	
+
+	<p>
+		<button name="enviar" id="enviar" value=""> Enviar datos</button>
+
+	</p>
+
+
+</form>
+
+</body>
+
+</html>

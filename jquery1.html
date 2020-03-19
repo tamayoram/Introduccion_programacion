@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo Jquery 1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<h1>Cálculo de precio</h1>
+
+<form>
+
+	<label for="">Valor</label>
+	<br>
+	<input type="number" name="valor" id="valor" value="" required>
+	<br>
+	<label for=""> %IVA </label>
+	<br>
+	<input type="number" name="iva" id="iva" value="" required>
+	<br>
+	Resultado:<span id="resultado"></span>
+	<br>
+	<button name="enviar" id="enviar" type="button">Calcular</button>
+
+</form>
+
+
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="Jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	
+
+// cuando se usa js nativo se capturan los elementos por medio de document.getElementById, document.getElementByName o document.frm.element.
+// jquery propone encontrar los datos usando siempre Id, y en lugar de usar document se usa el signo $. Invocar los elementos
+// es similar a estilos css #.
+
+// ojo todo el código después de la librería.
+
+//$("#enviar") //es lo mismo que document.getElementById('enviar')
+
+$("#enviar").click(function(){
+
+	// en js nativo se captura un valor asi document.getElementById(id).value
+	
+	valor=$("#valor").val();
+	IVA=$("#iva").val();
+
+	//cuando se usa el operador de suma, js lo interpreta como concatenar, entonces los valores se deben convertir usando eval o parseInt
+
+	resultado=eval(valor)+eval((valor*IVA/100));
+
+	// en el js nativo para imprimir un valor en un elemento que no fuera form se usa document.getElementById(id).innerHTML
+	$("#resultado").html(resultado);
+
+});
+
+// js nativo
+
+function calcular() {
+
+valor=document.getElementById('valor');
+iva=document.getElementById('iva');
+resultado=eval(valor)+eval(valor*iva/100);
+document.getElementById('resultado').innerHTML=resultado;
+
+}
+
+
+</script>

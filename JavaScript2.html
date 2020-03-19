@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ejemplo javascript con funciones y eventos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+<form>
+	<div class="container">	
+			<h1 class="text-left pt-4"> Operaciones</h1>
+
+			<div class="row">
+			 		<label for="valor1">Valor 1:</label>
+			 	  	<input type="number" class="form-control" id="valor1">
+			</div>  	
+
+			<div class="row">  
+			  	<label for="valor2">Valor 2:</label>
+			    <input type="number" class="form-control" id="valor2" onkeydown="operaciones2();" onkeypress="operaciones2();" onkeyup="operaciones2();">
+			</div>
+
+			<div class="row">  
+			  	<label>Resultado:</label>
+			    <span id="resultado" class="text-success font-weight-bold"></span>
+			</div>
+
+			<div class="row">  
+			  <button name="enviar" id="enviar" type="button" class="btn btn-info" onclick="operaciones();">Calcular</button>
+			</div>
+	</div>
+
+</form>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+// función para realizar la operación basada en capturar los valores, ejecutar la operación y mostrar el resultado//
+
+function operaciones() {
+
+//para capturar valores o datos de campos o de objetos html se utiliza getElementById
+
+var valor1=document.getElementById('valor1').value;
+var valor2=document.getElementById('valor2').value;
+
+//preguntar si los valores son mayores a cero//
+
+if (valor1<=0) {
+
+document.getElementById('valor1').placeholder="Digite el valor 1";
+document.getElementById('valor1').focus();
+
+//para salir de una función usamos return//
+
+return;
+
+}
+
+
+if (valor2<=0) {
+
+document.getElementById('valor2').placeholder="Digite el valor 2";
+document.getElementById('valor2').focus();
+
+//para salir de una función usamos return//
+
+return;
+
+}
+
+
+
+var resultado=valor1*valor2;
+
+
+// para mostrar valores en objeto html se usa innerHTML //
+
+document.getElementById('resultado').innerHTML=" es " + resultado;
+
+}
+
+function operaciones2() {
+
+//para capturar valores o datos de campos o de objetos html se utiliza getElementById
+
+var valor1=document.getElementById('valor1').value;
+var valor2=document.getElementById('valor2').value;
+
+//preguntar si los valores son mayores a cero//
+
+
+var resultado=valor1*valor2;
+
+
+// para mostrar valores en objeto html se usa innerHTML //
+
+document.getElementById('resultado').innerHTML=" es " + resultado;
+
+}
+
+
+
+</script>

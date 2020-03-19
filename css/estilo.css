@@ -1,0 +1,60 @@
+h3{font-family:'tahoma';
+	font-size: 14px;
+	width:;
+	color:;
+	background-color:#ffec43
+	}	
+
+	.resaltado{
+		font-family: "helvetica";
+		font-size: 25px;
+		background-color: red;
+		color: #fff;		
+			  }
+
+	#titulo{
+		font-family: "arial";
+		font-size: 30px;
+		background-color: green;
+		color: #fff;		
+			  }
+
+
+body{
+	font-family: 'tahoma';
+	}
+
+input{
+	height:20px;
+	width: 250px;
+	padding: 10px;
+	 }
+
+
+select{
+	height: 20px;
+	width: 250px;
+	 }
+
+textarea{
+	height: 60px;
+		 }
+
+input,select,textarea{
+	border-radius: 4px;
+	 }
+
+button{background-color: gray;
+	   color: white;
+	   border-radius: 5px;
+	   border-color: black;
+	
+		 }
+
+label{
+	font-weight: bold;
+		 }
+
+form{
+	margin: 25px;
+		 }
